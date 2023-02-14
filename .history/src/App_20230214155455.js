@@ -9,16 +9,8 @@ function App() {
             <div className="App">
                 <Routes>
                     {publicRoutes.map((item, index) => {
+                        const Layout = item.layout === null ? Fragment : DefaultLayout;
                         const Page = item.component;
-
-                        let Layout = DefaultLayout;
-
-                        if (item.layout) {
-                            Layout = item.layout;
-                        } else if (item.layout === null) {
-                            Layout = Fragment;
-                        }
-
                         return (
                             <Route
                                 key={index}

@@ -13,10 +13,10 @@ function App() {
 
                         let Layout = DefaultLayout;
 
-                        if (item.layout) {
-                            Layout = item.layout;
-                        } else if (item.layout === null) {
+                        if (item.layout === null) {
                             Layout = Fragment;
+                        } else {
+                            Layout = item.layout;
                         }
 
                         return (
