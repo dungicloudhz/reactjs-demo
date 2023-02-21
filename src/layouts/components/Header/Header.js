@@ -5,27 +5,18 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import {
     faCircleQuestion,
-    faCircleXmark,
     faCloudUpload,
     faCoins,
     faEarthAsia,
     faEllipsisVertical,
     faGear,
     faKeyboard,
-    faMagnifyingGlass,
-    faMessage,
-    faSignIn,
-    faSignOut,
-    faSpinner,
-    faUpload,
     faUser,
+    faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
 
 import Tippy from '@tippyjs/react';
-import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css'; // optional
-import { Wrapper as PopperWrapper } from '~/Components/Propper';
-import AccountItem from '~/Components/AccountItem';
 import Button from '~/Components/Button';
 import Menu from '~/Components/Propper/Menu';
 import 'tippy.js/dist/tippy.css';
@@ -33,7 +24,7 @@ import { MailBox, MessageIcon } from '~/Components/Icons';
 import Image from '~/Components/Image';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -47,107 +38,6 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'en',
                     title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng việt',
                 },
                 {
                     type: 'language',
@@ -208,7 +98,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo')}>
+                <Link to={config.routes.home} className={cx('logo')}>
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
                 {/* Search */}

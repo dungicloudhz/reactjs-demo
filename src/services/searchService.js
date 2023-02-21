@@ -1,4 +1,4 @@
-import { get } from '~/utils/request';
+import { get } from '~/utils/httpRequest';
 
 export const search = async (q, type = 'less') => {
     try {
